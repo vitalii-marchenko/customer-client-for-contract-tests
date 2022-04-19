@@ -4,7 +4,6 @@ import org.assertj.core.api.BDDAssertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.json.AutoConfigureJson;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.contract.stubrunner.spring.AutoConfigureStubRunner;
 import org.springframework.cloud.contract.stubrunner.spring.StubRunnerProperties;
@@ -15,7 +14,6 @@ import java.util.Collection;
 @SpringBootTest(classes = CustomerClient.class)
 @RunWith(SpringRunner.class)
 @AutoConfigureStubRunner(ids = "com.example:customer-service:+:8081", stubsMode = StubRunnerProperties.StubsMode.LOCAL)
-@AutoConfigureJson
 public class CustomerClientTest {
 
     @Autowired
